@@ -1,0 +1,90 @@
+.apoyo-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2em;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.apoyo-container h1 {
+  color: #0077B6;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.apoyo-container p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 2em;
+}
+
+.tarjetas-psicologos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5em;
+}
+
+.tarjeta {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.5em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta h3 {
+  margin-bottom: 0.5em;
+  color: #023e8a;
+}
+
+.tarjeta p {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0;
+  word-break: break-word; /* 👈 Solución para correos largos */
+  font-size: 0.95rem;
+}
+
+.no-resultados {
+  grid-column: 1/-1;
+  text-align: center;
+  font-style: italic;
+  color: #888;
+}
+
+/* Iconos más estilizados */
+.tarjeta svg {
+  color: #0077B6;
+  min-width: 1rem;
+}
+
+/* Responsive ajustes */
+@media (max-width: 600px) {
+  .apoyo-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .tarjeta {
+    padding: 1.2em;
+  }
+
+  .tarjeta p {
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

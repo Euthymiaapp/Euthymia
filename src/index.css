@@ -1,0 +1,139 @@
+/* ========== ESTILO GLOBAL ========== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F5F5F5;
+  color: #333;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0077B6;
+  padding: 1em 2em;
+  color: white;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Botón hamburguesa (solo en móvil) */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Links de navegación */
+.nav-links {
+  display: flex;
+  gap: 1em;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ========== CONTENIDO GENERAL ========== */
+h1, h2, h3 {
+  color: #0077B6;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2em;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+ul {
+  padding-left: 1.5em;
+}
+
+/* ========== BOTONES ========== */
+button {
+  background-color: #90BE6D;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  margin: 0.5em 0;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #72a957;
+}
+
+/* ========== ANIMACIÓN DE SECCIÓN (SUAVE) ========== */
+.page {
+  animation: fadeInOpacity 0.4s ease-in-out;
+}
+
+@keyframes fadeInOpacity {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .nav-links.activo {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 0.75em 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .navbar {
+    align-items: flex-start;
+  }
+
+  .container {
+    padding: 1.5em;
+  }
+}
+.logo-img {
+  height: 45px;
+  object-fit: contain;
+  background-color: white;     /* Fondo blanco */
+  padding: 6px;                /* Espaciado interno para que no se vea pegado */
+  border-radius: 10px;         /* Bordes redondeados */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Sombra suave */
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}

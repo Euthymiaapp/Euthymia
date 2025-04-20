@@ -1,0 +1,59 @@
+.juegos-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2em;
+  text-align: center;
+}
+
+.titulo-juegos {
+  font-size: 2.2rem;
+  color: #0077b6;
+  margin-bottom: 0.5em;
+}
+
+.intro-juegos {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 2em;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.juegos-grid {
+  display: grid;
+  gap: 1.5em;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  padding: 0 1em;
+}
+
+.juego-card {
+  background: #f0faff;
+  border-radius: 15px;
+  padding: 1.5em;
+  text-decoration: none;
+  color: #222;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.juego-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.emoji-grande {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.juego-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5em;
+  color: #023e8a;
+}
+
+.juego-card p {
+  font-size: 1rem;
+  color: #444;
+}

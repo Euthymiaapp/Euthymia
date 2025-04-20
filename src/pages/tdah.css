@@ -1,0 +1,235 @@
+/* ========== FONDO GLOBAL Y TIPOGRAFÍA ========== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #e6f2ff, #ffffff);
+    color: #333;
+  }
+  
+  /* ========== CONTENEDOR GENERAL ========== */
+  .tdah-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2em;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    background: #f9f9f9;
+    animation: fadeIn 0.8s ease;
+  }
+  
+  
+  
+  /* ========== ENCABEZADO ========== */
+  .tdah-header11 {
+    text-align: center;
+    margin-bottom: 2.5em;
+   
+  }
+  
+  .tdah-header h1 {
+    color: #0077B6;
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+  }
+  
+  .tdah-header p {
+    font-size: 1.15rem;
+    color: #555;
+  }
+  
+  /* ========== VIDEO ========= */
+  .tdah-video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 2em 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  
+  .tdah-video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* ========== SECCIONES ========== */
+  .tdah-section {
+    margin-bottom: 3em;
+    animation: fadeIn 0.8s ease;
+  }
+  
+  .tdah-section h2 {
+    color: #023E8A;
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+  }
+  
+  .tdah-section p {
+    font-size: 1.08rem;
+  }
+  
+  /* ========== IMÁGENES ========== */
+  .tdah-image-full, .tdah-image-medium {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    border-radius: 12px;
+    display: block;
+    margin: 2em auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .tdah-image-medium:hover,
+  .tdah-image-full:hover {
+    transform: scale(1.03);
+  }
+  
+  /* ========== LISTAS ========== */
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  ul li {
+    position: relative;
+    padding-left: 1.8em;
+    margin-bottom: 0.8em;
+    transition: all 0.2s ease;
+  }
+  
+  ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #90BE6D;
+    font-weight: bold;
+  }
+  
+  /* ========== GRILLA DE CARDS ========== */
+  .tdah-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5em;
+  }
+  
+  .tdah-card {
+    background: #f2faff;
+    padding: 1.5em;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tdah-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .tdah-card img {
+    width: 70px;
+    margin-bottom: 0.8em;
+  }
+  
+  .tdah-card h3 {
+    color: #0077B6;
+  }
+  
+  /* ========== TABLAS ========== */
+  .tdah-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+    font-size: 0.98rem;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .tdah-table.elegante {
+    border: 2px solid #0077b6;
+  }
+  
+  .tdah-table thead {
+    background-color: #0077B6;
+    color: white;
+  }
+  
+  .tdah-table th,
+  .tdah-table td {
+    border: 1px solid #ddd;
+    padding: 1em;
+    text-align: left;
+  }
+  
+  /* ========== IMAGEN + TEXTO LATERAL ========== */
+  .tdah-image-text {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    margin: 2em 0;
+  }
+  
+  .tdah-image-text.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .tdah-image-text img {
+    max-width: 240px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  
+  /* ========== PIE DE PÁGINA ========== */
+  .tdah-footer {
+    background-color: #0077B6;
+    color: white;
+    padding: 1.3em;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 3em;
+  }
+  
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 768px) {
+    .tdah-header h1 {
+      font-size: 1.8rem;
+    }
+  
+    .tdah-section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .tdah-image-text {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .tdah-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .tdah-footer {
+      font-size: 1rem;
+    }
+  
+    .tdah-video-container {
+      border-radius: 8px;
+    }
+  }
+  /* Contenedor para tablas responsivas */
+.tabla-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ajustes visuales adicionales para que la tabla no se rompa */
+.tdah-table {
+  min-width: 600px; /* Previene que las columnas se colapsen */
+}
+
