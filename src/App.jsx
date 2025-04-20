@@ -36,12 +36,11 @@ function App() {
           <Link to="/dislexia" onClick={() => setMenuAbierto(false)}>Dislexia</Link>
           <Link to="/juegos" onClick={() => setMenuAbierto(false)}>Juegos</Link>
           <Link to="/Apoyo" onClick={() => setMenuAbierto(false)}>Apoyo</Link>
-
         </div>
       </nav>
 
       <Routes>
-        <Route path="/" element={<Inicio />} />
+        <Route index element={<Inicio />} />
         <Route path="/tdah" element={<TDAH />} />
         <Route path="/tea" element={<TEA />} />
         <Route path="/dislexia" element={<Dislexia />} />
@@ -50,8 +49,11 @@ function App() {
         <Route path="/juegos/Juegodememoria" element={<JuegoDeMemoria />} />
         <Route path="/juegos/PuzzleGame" element={<JuegodeRompecabezas />} />
         <Route path="/juegos/Juegoemociones" element={<Juegodeemociones />} />
-        <Route path="/juegos/Juegoletras" element={<JuegoLetras/>} />
+        <Route path="/juegos/Juegoletras" element={<JuegoLetras />} />
         <Route path="/Apoyo" element={<Apoyo />} />
+
+        {/* 👇 Ruta por defecto si no se encuentra otra */}
+        <Route path="*" element={<Inicio />} />
       </Routes>
     </div>
   )
